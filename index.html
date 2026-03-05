@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- daisyui & tailwind cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- font-awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Tree Earth</title>
+</head>
+<body class="bg-[#F0FDF4]">
+    <main class="w-11/12 mx-auto">
+        <h2 class="text-4xl font-bold text-dark text-center py-10">Choose Your Trees</h2>
+        <section class="grid grid-cols-12 gap-8">
+
+            <!-- categories -->
+            <div class="card-body col-span-3">
+                <h2 class="text-2xl font-semibold mb-4">Categories</h2>
+                <div class="space-y-3">
+                    <button id="all-trees-btn" class="btn btn-wide btn-success">All Trees</button>
+
+                    <div id="categories-container" class="space-y-3">
+                        <!-- Categories will be dynamically loaded here by js -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- trees -->
+             <div class="col-span-6">
+                <div id="trees-container" class=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                
+                </div>
+
+                <!-- loading spinner -->
+                 <div id="loading-spinner" class="h-[60vh] flex justify-center items-center hidden">
+                    <span class="loading loading-spinner loading-xl"></span>
+                 </div>
+            </div>
+
+            <!-- cart -->
+            <div class="col-span-3">
+
+            </div>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
